@@ -31,18 +31,8 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    }
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } }
   ],
   "targetDefaults": {
     "@nx/remix:build": {
@@ -50,8 +40,8 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     },
-    "e2e-ci--**/*": {
-      "dependsOn": ["^build"]
-    }
-  }
+    "e2e-ci--**/*": { "dependsOn": ["^build"] }
+  },
+  "nxCloudId": "66be24e88f343a41240f7a3d",
+  "nxCloudUrl": "https://staging.nx.app"
 }
